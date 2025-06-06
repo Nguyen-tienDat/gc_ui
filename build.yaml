@@ -1,0 +1,25 @@
+targets:
+  $default:
+    builders:
+      json_serializable:
+        generate_for:
+          - lib/models/**
+          - lib/screens/**/*model.dart
+          - lib/screens/**/*state.dart
+          - lib/screens/**/*controller.dart
+      freezed:
+        enabled: true
+        options:
+          json: false
+        generate_for:
+          - lib/models/**
+          - lib/screens/**/*model.dart
+          - lib/screens/**/*state.dart
+          - lib/screens/**/*controller.dart
+      auto_route_generator:auto_route_generator:
+        generate_for:
+          - lib/router/*.dart
+          - lib/screens/**
+      auto_route_generator:auto_router_generator:
+        generate_for:
+          - lib/router/*.dart
